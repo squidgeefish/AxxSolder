@@ -206,7 +206,7 @@ Flash_values default_flash_values = {.startup_temperature = 330,
 											.preset_temp_1 = 330,
 											.preset_temp_2 = 430,
 											.GPIO4_ON_at_run = 0,
-											.screen_rotation = 2,
+											.screen_rotation = 0,
 											.power_limit = 0,
 											.current_measurement = 1};
 
@@ -1575,7 +1575,7 @@ static void MX_SPI2_Init(void)
   hspi2.Init.Mode = SPI_MODE_MASTER;
   hspi2.Init.Direction = SPI_DIRECTION_1LINE;
   hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi2.Init.CLKPolarity = SPI_POLARITY_HIGH;
   hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi2.Init.NSS = SPI_NSS_SOFT;
   hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
